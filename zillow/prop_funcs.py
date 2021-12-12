@@ -126,7 +126,7 @@ class PropertyScraper:
             return zestimate
         except Exception: return None
 
-    def scrape_link(self, prop) -> None | str: 
+    def scrape_link(self, prop): 
         try:
             container = prop.find("div", { "class": "list-card-top" })
             link = container.find("a", { "class": "list-card-link" }).attrs['href']
